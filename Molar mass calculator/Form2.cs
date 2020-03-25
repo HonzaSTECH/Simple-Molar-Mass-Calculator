@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Molar_mass_calculator
 {
-    public partial class MainForm : Form
+    public partial class HelpForm : Form
     {
-        public MainForm()
+        public HelpForm()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            //Help button
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            //Calculate button
         }
     }
 }
