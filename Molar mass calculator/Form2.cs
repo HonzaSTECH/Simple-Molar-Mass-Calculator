@@ -16,5 +16,28 @@ namespace Molar_mass_calculator
         {
             InitializeComponent();
         }
+
+        private void HelpButton1_Click(object sender, EventArgs e)
+        {
+            HelpDialogue helpDialogue = new HelpDialogue();
+            helpDialogue.ShowDialog();
+        }
+
+        private void HelpButton2_Click(object sender, EventArgs e)
+        {
+            FeedbackDialogue feedbackDialogue = new FeedbackDialogue();
+            feedbackDialogue.ShowDialog();
+        }
+
+        private void HelpButton3_Click(object sender, EventArgs e)
+        {
+            CreditsDialogue creditsDialogue = new CreditsDialogue();
+            creditsDialogue.ShowDialog();
+        }
+
+        private void HelpButtonReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

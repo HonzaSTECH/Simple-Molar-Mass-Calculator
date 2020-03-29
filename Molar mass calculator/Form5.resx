@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreditsText.Text" xml:space="preserve">
+    <value>Simple Molar Mass Calculator by Jan Štěch ©
+Created on 29th March 2020 in Czech Republic
+This software is freeware. Distributed under MIT License.
+For more information, see https://github.com/HonzaSTECH/Simple-Molar-Mass-Calculator/blob/master/LICENSE</value>
+  </data>
 </root>

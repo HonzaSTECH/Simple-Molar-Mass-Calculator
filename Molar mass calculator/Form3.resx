@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HelpText.Text" xml:space="preserve">
+    <value>Using this program to calculate the molar mass of any molecule is very easy. All you need to do is type the formula of the molecule into the textfield and hit enter or the "Calculate" button.
+There are just a few rules about the formula.
+- Elements must start with a capital letter, all other letters must be lowercase - CuO
+- Numbers must be written normally, not by indexes - Fe2O3
+- Any element might occur multiple times - Fe3O4 or Fe2O3FeO
+- It might contain parentheses, but no square brackets - K3(Co(CN)6), not K3[Co(CN)6]
+- It mustn't contain any other characters than letters and numbers</value>
+  </data>
 </root>

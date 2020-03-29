@@ -17,14 +17,20 @@ namespace Molar_mass_calculator
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        static void HelpButton_Click(object sender, CancelEventArgs e)
         {
-            //Help button
+            //MessageBox.Show("Help will come here\nBug report link will come here\nDeveloper's credit will come here", "Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            //Calculate button
+            string formula = InputField.Text;
+            /*
+             Do calculations
+             */
+            OutputTextBox.Text = formula+"\nDisplay result here...";
         }
     }
 }

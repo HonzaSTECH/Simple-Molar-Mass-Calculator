@@ -28,59 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.RichTextBox HelpText;
-            this.HelpButton = new System.Windows.Forms.Button();
-            HelpText = new System.Windows.Forms.RichTextBox();
+            this.HelpButton2 = new System.Windows.Forms.Button();
+            this.HelpButton3 = new System.Windows.Forms.Button();
+            this.HelpButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // HelpButton
+            // HelpButton2
             // 
-            this.HelpButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.HelpButton.Location = new System.Drawing.Point(100, 162);
-            this.HelpButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.HelpButton.Name = "HelpButton";
-            this.HelpButton.Size = new System.Drawing.Size(83, 44);
-            this.HelpButton.TabIndex = 0;
-            this.HelpButton.Text = "OK";
-            this.HelpButton.UseVisualStyleBackColor = true;
+            this.HelpButton2.Location = new System.Drawing.Point(61, 59);
+            this.HelpButton2.Name = "HelpButton2";
+            this.HelpButton2.Size = new System.Drawing.Size(161, 41);
+            this.HelpButton2.TabIndex = 2;
+            this.HelpButton2.Text = "Feedback";
+            this.HelpButton2.UseVisualStyleBackColor = true;
+            this.HelpButton2.Click += new System.EventHandler(this.HelpButton2_Click);
             // 
-            // HelpText
+            // HelpButton3
             // 
-            HelpText.BackColor = System.Drawing.SystemColors.MenuBar;
-            HelpText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            HelpText.CausesValidation = false;
-            HelpText.Cursor = System.Windows.Forms.Cursors.Arrow;
-            HelpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            HelpText.Location = new System.Drawing.Point(12, 12);
-            HelpText.Name = "HelpText";
-            HelpText.Size = new System.Drawing.Size(260, 141);
-            HelpText.TabIndex = 2;
-            HelpText.Text = "Help will come here\nBug report link will come here\nDeveloper\'s credit will come h" +
-    "ere";
+            this.HelpButton3.Location = new System.Drawing.Point(61, 106);
+            this.HelpButton3.Name = "HelpButton3";
+            this.HelpButton3.Size = new System.Drawing.Size(161, 41);
+            this.HelpButton3.TabIndex = 3;
+            this.HelpButton3.Text = "Credits";
+            this.HelpButton3.UseVisualStyleBackColor = true;
+            this.HelpButton3.Click += new System.EventHandler(this.HelpButton3_Click);
+            // 
+            // HelpButton1
+            // 
+            this.HelpButton1.Location = new System.Drawing.Point(61, 12);
+            this.HelpButton1.Name = "HelpButton1";
+            this.HelpButton1.Size = new System.Drawing.Size(161, 41);
+            this.HelpButton1.TabIndex = 1;
+            this.HelpButton1.Text = "Help";
+            this.HelpButton1.UseVisualStyleBackColor = true;
+            this.HelpButton1.Click += new System.EventHandler(this.HelpButton1_Click);
             // 
             // HelpForm
             // 
-            this.AcceptButton = this.HelpButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.HelpButton;
-            this.ClientSize = new System.Drawing.Size(284, 216);
-            this.ControlBox = false;
-            this.Controls.Add(HelpText);
-            this.Controls.Add(this.HelpButton);
-            this.Enabled = false;
+            this.ClientSize = new System.Drawing.Size(284, 159);
+            this.Controls.Add(this.HelpButton1);
+            this.Controls.Add(this.HelpButton3);
+            this.Controls.Add(this.HelpButton2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HelpForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Help";
+            this.Text = "Information";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button HelpButton;
+        private System.Windows.Forms.Button HelpButton2;
+        private System.Windows.Forms.Button HelpButton3;
+        private System.Windows.Forms.Button HelpButton1;
     }
 }
