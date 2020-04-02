@@ -70,8 +70,9 @@
             this.Controls.Add(this.FeedbackText);
             this.Controls.Add(this.FeedbackDialogueButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FeedbackDialogue";
+            this.ShowInTaskbar = false;
             this.Text = "Feedback";
             this.TopMost = true;
             this.ResumeLayout(false);

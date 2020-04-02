@@ -74,9 +74,6 @@ namespace Molar_mass_calculator
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.ShowInTaskbar = false;
-            //this.Load += new System.EventHandler(this.MainForm_Load);
-            this.HelpButtonClicked += HelpButton_Click;
             this.ResumeLayout(false);
             this.PerformLayout();
 

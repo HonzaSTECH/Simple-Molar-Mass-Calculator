@@ -69,8 +69,9 @@
             this.Controls.Add(this.CreditsText);
             this.Controls.Add(this.CreditsDialogueButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreditsDialogue";
+            this.ShowInTaskbar = false;
             this.Text = "Credits";
             this.TopMost = true;
             this.ResumeLayout(false);
