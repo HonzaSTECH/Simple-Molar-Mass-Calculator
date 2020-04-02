@@ -124,6 +124,7 @@ There are just a few rules about the formula.
 - Numbers must be written normally, not by indexes - Fe2O3
 - Any element might occur multiple times - Fe3O4 or Fe2O3FeO
 - It might contain parentheses, but no square brackets - K3(Co(CN)6), not K3[Co(CN)6]
-- It mustn't contain any other characters than letters and numbers</value>
+- It mustn't contain any other characters than letters and numbers
+- Hydrates must be written without separated water - CuSO4(H2O)5, not CuSO4.5H2O</value>
   </data>
 </root>

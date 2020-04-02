@@ -19,7 +19,6 @@ namespace Molar_mass_calculator
 
         static void HelpButton_Click(object sender, CancelEventArgs e)
         {
-            //MessageBox.Show("Help will come here\nBug report link will come here\nDeveloper's credit will come here", "Help", MessageBoxButtons.OK, MessageBoxIcon.Question);
             HelpForm helpForm = new HelpForm();
             helpForm.ShowDialog();
         }
@@ -27,10 +26,8 @@ namespace Molar_mass_calculator
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             string formula = InputField.Text;
-            /*
-             Do calculations
-             */
-            OutputTextBox.Text = formula+"\nDisplay result here...";
+            string result = Calculator.CalculateM(formula);
+            OutputTextBox.Text = result;
         }
     }
 }
