@@ -16,9 +16,17 @@ namespace Molar_mass_calculator
             ElementGroup molecule = new ElementGroup(formula, 1, true);
 
             //Disassemble the formula in the ElementGroup object to single elements
-            molecule.CountElements();
+            Dictionary<string,int> elementsTable = molecule.CountElements();
+
+            //Add the molar masses of all the atoms together
+            M = AddMolarMasses(elementsTable);
 
             return "Molar mass of " + formula + ": " + M + " g/mol";
+        }
+
+        private static double AddMolarMasses(Dictionary<string, int> elementsTable)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -104,11 +112,68 @@ namespace Molar_mass_calculator
         /**
          * Method going through the molecule tree and counting separated atoms by multiplying the numbers behind brackets
          * For example: [{"C",1},{[{"S",2},{"O",3}],2},{{["H",2},{"O",1}],5}] --> [{"C",1},{"S",4},{"O",6},{"H",10},{"O",5}]
+         * Returns dictionary with elements as keys and their counts as values
          */
-        internal void CountElements()
+        internal Dictionary<string, int> CountElements()
         {
-            throw new NotImplementedException();
-            //TODO
+            this.MultiplyElements(this.count);  //this.count is always 1, because this method is called only from the object containing the whole molecule
+            return this.ExtractElementDictionary();
+        }
+
+        /**
+         * Method multiplying the count of single atoms in the formula by the numbers behind brackets (H2O)5 --> (H10,O5)1
+         */
+        private void MultiplyElements(int multiplier)
+        {
+            if (this.element != null)
+            {
+                this.count *= multiplier;
+            }
+            else
+            {
+                foreach (ElementGroup current in this.content)
+                {
+                    current.MultiplyElements(this.count * multiplier);
+                }
+                this.count = 1;
+            }
+        }
+
+        /**
+         * Method returning dictionary of elements with their counts in the whole molecule
+         * If no dictionary is provided for writing as argument, an empty one will be created and sent further
+         * That happens only in the object containing the whole molecule
+         */
+        private Dictionary<string, int> ExtractElementDictionary(Dictionary<string, int> result = null)
+        {
+            if (result == null)
+            {
+                result = new Dictionary<string, int>();
+            }
+
+            if (this.element != null)
+            {
+                //Append new element or add it's count to already existing key in the dictionary
+                try
+                {
+                    //Element already exists in the dictionary
+                    result[this.element] += this.count;
+                }
+                catch (System.Collections.Generic.KeyNotFoundException)
+                {
+                    //Element doesn't exist in the dictionary yet
+                    result.Add(this.element, this.count);
+                }
+            }
+            else
+            {
+                //Iterate through all element groups stored in the array and do the same inside of them
+                foreach (ElementGroup current in this.content)
+                {
+                    current.ExtractElementDictionary(result);
+                }
+            }
+            return result;
         }
     }
 }
