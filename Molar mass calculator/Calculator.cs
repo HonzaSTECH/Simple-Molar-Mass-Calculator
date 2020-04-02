@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Resources;
 
 namespace Molar_mass_calculator
 {
@@ -23,7 +25,16 @@ namespace Molar_mass_calculator
 
         private static double AddMolarMasses(Dictionary<string, int> elementsTable)
         {
-            throw new NotImplementedException();
+            var rSet = Elements.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, true, true);
+            double result = 0;
+
+            foreach (KeyValuePair<string, int> pair in elementsTable)
+            {
+                Double mass = Double.Parse(rSet.GetString(pair.Key), CultureInfo.InvariantCulture);
+                result += mass * pair.Value;
+            }
+
+            return result;
         }
     }
 }
