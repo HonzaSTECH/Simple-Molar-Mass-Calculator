@@ -1,4 +1,4 @@
-﻿namespace Molar_mass_calculator
+namespace Molar_mass_calculator
 {
     partial class MainForm
     {
