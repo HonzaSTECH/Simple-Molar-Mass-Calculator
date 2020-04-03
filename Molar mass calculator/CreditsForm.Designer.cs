@@ -72,6 +72,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreditsDialogue";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Credits";
             this.TopMost = true;
             this.ResumeLayout(false);

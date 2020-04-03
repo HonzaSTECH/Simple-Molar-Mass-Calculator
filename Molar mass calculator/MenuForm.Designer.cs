@@ -78,6 +78,7 @@
             this.Name = "HelpForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Information";
             this.ResumeLayout(false);
 

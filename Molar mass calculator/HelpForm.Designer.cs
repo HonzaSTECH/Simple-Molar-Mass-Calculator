@@ -1,4 +1,4 @@
-﻿namespace Molar_mass_calculator
+namespace Molar_mass_calculator
 {
     partial class HelpDialogue
     {
@@ -72,6 +72,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "HelpDialogue";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Help";
             this.TopMost = true;
             this.ResumeLayout(false);

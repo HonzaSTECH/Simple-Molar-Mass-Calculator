@@ -73,6 +73,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FeedbackDialogue";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Feedback";
             this.TopMost = true;
             this.ResumeLayout(false);
