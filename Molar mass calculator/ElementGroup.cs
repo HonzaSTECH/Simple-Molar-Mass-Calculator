@@ -18,6 +18,12 @@ namespace Molar_mass_calculator
          */
         public ElementGroup(string content, int count, bool containsElementGroup)
         {
+            //Check if the content isn't empty
+            if (content.Length == 0)
+            {
+                throw new InvalidInputException("You didn't enter any formula.");
+            }
+
             this.count = count;
             if (containsElementGroup)
             {
@@ -64,12 +70,26 @@ namespace Molar_mass_calculator
                 index++;
             } while (index < content.Length && (!contentTerminatingChars.Contains(content[index].ToString()) || (bracketsLevel > 0)));
 
+            //Checking for balanced brackets
+            if (bracketsLevel != 0)
+            {
+                throw new InvalidInputException("Unbalanced brackets.");
+            }
+
             while (index < content.Length && (!countTerminatingChars.Contains(content[index].ToString())))
             {
                 resultCount += content[index];
                 index++;
             }
             if (resultCount.Length == 0) { resultCount = "1"; }
+            try
+            {
+                int resultCountInt = Convert.ToInt32(resultCount);
+            }
+            catch (FormatException e) 
+            {
+                throw new InvalidInputException("Count of element or element group " + resultContent + " contains a non-number character.");
+            }
 
             bool containsGroup = false;
             if (resultContent.Contains("("))

@@ -144,6 +144,9 @@
   <data name="&gt;&gt;InputField.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="SubmitButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="SubmitButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 68</value>
   </data>
@@ -235,6 +238,9 @@ Need help? Click the [?] icon at the top right.</value>
   </data>
   <data name="&gt;&gt;OutputTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="CopyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 19</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1809,6 +1815,12 @@ Need help? Click the [?] icon at the top right.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Simple Molar Mass Calculator</value>
+  </data>
+  <data name="&gt;&gt;CopyMenuItem.Name" xml:space="preserve">
+    <value>CopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;CopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

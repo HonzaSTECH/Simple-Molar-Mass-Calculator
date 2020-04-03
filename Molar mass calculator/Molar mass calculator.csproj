@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Calculator.cs" />
     <Compile Include="ElementGroup.cs" />
+    <Compile Include="InvalidInputException.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

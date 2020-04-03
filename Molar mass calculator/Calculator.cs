@@ -22,9 +22,14 @@ namespace Molar_mass_calculator
                 //Add the molar masses of all the atoms together
                 M = AddMolarMasses(elementsTable);
             }
+            catch (InvalidInputException e)
+            {
+                return e.Message + "\nPlease, check the Help menu for rules about writing formulas.";
+            }
             catch (Exception e)
             {
-                return "An exception occured.\nThis is most likely caused by invalid input.\nPlease, check the Help menu for rules about writing formulas and if this problem persist, submit a bug report via the Feedback menu.\nPlease, include the following informationg in your report. Thanks.\n\nAn exception occured while calculating molar mass of " + formula + ": " + e.ToString();
+                return "An unexpected exception occured.\nThis shouldn't be happening.\nCan you please submit a bug report via the Feedback menu (accessible via the help button).\nPlease, don't forget to include the formula you entered in your report.\n\nException details: " + e.ToString();
+                //return "An exception occured.\nThis is most likely caused by invalid input.\nPlease, check the Help menu for rules about writing formulas and if this problem persist, submit a bug report via the Feedback menu.\nPlease, include the following informationg in your report. Thanks.\n\nAn exception occured while calculating molar mass of " + formula + ": " + e.ToString();
             }
 
             return "Molar mass of " + formula + ": " + M + " g/mol";
@@ -37,7 +42,12 @@ namespace Molar_mass_calculator
 
             foreach (KeyValuePair<string, int> pair in elementsTable)
             {
-                Double mass = Double.Parse(rSet.GetString(pair.Key), CultureInfo.InvariantCulture);
+                string singleElementMass = rSet.GetString(pair.Key);
+                if (singleElementMass == null)
+                {
+                    throw new InvalidInputException("Unknown element: " + pair.Key);
+                }
+                Double mass = Double.Parse(singleElementMass, CultureInfo.InvariantCulture);
                 result += mass * pair.Value;
             }
 

@@ -33,12 +33,14 @@ namespace Molar_mass_calculator
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Label = new System.Windows.Forms.Label();
             this.OutputTextBox = new System.Windows.Forms.RichTextBox();
+            this.CopyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SuspendLayout();
             // 
             // InputField
             // 
             resources.ApplyResources(this.InputField, "InputField");
             this.InputField.Name = "InputField";
+            this.InputField.TextChanged += new System.EventHandler(this.InputField_TextChanged);
             // 
             // SubmitButton
             // 
@@ -56,10 +58,18 @@ namespace Molar_mass_calculator
             // OutputTextBox
             // 
             this.OutputTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.OutputTextBox.CausesValidation = false;
             resources.ApplyResources(this.OutputTextBox, "OutputTextBox");
+            this.OutputTextBox.HideSelection = false;
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.ReadOnly = true;
-            this.OutputTextBox.ShortcutsEnabled = false;
+            this.OutputTextBox.ShortcutsEnabled = true;
+            this.OutputTextBox.MouseUp += OutputTextBox_MouseUp;
+            // 
+            // CopyMenuItem
+            // 
+            this.CopyMenuItem.Name = "CopyMenuItem";
+            resources.ApplyResources(this.CopyMenuItem, "CopyMenuItem");
             // 
             // MainForm
             // 
@@ -76,6 +86,7 @@ namespace Molar_mass_calculator
             this.Name = "MainForm";
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.HelpButtonClicked += HelpButton_Click;
 
         }
 
@@ -84,6 +95,7 @@ namespace Molar_mass_calculator
         private System.Windows.Forms.TextBox InputField;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label Label;
+        private System.Windows.Forms.ToolStripMenuItem CopyMenuItem;
         private System.Windows.Forms.RichTextBox OutputTextBox;
     }
 }
