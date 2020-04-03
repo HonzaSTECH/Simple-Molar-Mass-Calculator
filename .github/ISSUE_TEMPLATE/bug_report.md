@@ -2,7 +2,7 @@
 name: Bug report
 about: Report a bug to help me improve
 title: ''
-labels: bug
+labels: Bug
 assignees: HonzaSTECH
 
 ---
