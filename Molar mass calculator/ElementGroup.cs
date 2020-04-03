@@ -30,7 +30,7 @@ namespace Molar_mass_calculator
                 //Split content variable (for example "(Co(CN)6)") into array of shorter strings ({"Co",1},{"CN",6})
 
                 //If we got element group in brackets as content, we will skip the opening bracket, so we don't just return the whole group again
-                if (content[0] == '(')
+                if (content[0] == '(' && content[content.Length - 1] == ')')
                 {
                     //Removing the brackets
                     content = content.Substring(1, content.Length - 2);
