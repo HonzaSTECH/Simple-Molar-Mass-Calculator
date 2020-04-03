@@ -20,8 +20,8 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Error message**
+If applicable, add copy of error message you got. The error message usually starts with "An exception occured."
 
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
